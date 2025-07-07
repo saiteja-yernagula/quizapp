@@ -1,0 +1,20 @@
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 8px 16px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* styles.css */
+.hover-shadow:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.transition {
+  transition: all 0.3s ease-in-out;
+}
