@@ -11,7 +11,7 @@ function Dashboard() {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    axios.get("http://localhost:8000/api/quizzes/", {
+    axios.get("https://quizapp-1-y0cu.onrender.com/api/quizzes/", {
       headers: {
         Authorization: `Bearer ${token}`,
       },

@@ -46,7 +46,7 @@ const AdminDashboard = () => {
   // Fetch the list of quizzes from backend
   const fetchQuizzes = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/api/admin/quizzes/", {
+      const res = await axios.get("https://quizapp-1-y0cu.onrender.com/api/admin/quizzes/", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setQuizList(res.data);
@@ -162,7 +162,7 @@ const AdminDashboard = () => {
     try {
       if (editMode && editingQuizId) {
         await axios.put(
-          `http://localhost:8000/api/admin/quizzes/${editingQuizId}/`,
+          `https://quizapp-1-y0cu.onrender.com/api/admin/quizzes/${editingQuizId}/`,
           payload,
           {
             headers: {
@@ -173,7 +173,7 @@ const AdminDashboard = () => {
         );
         toast.success("✅ Quiz updated successfully!");
       } else {
-        await axios.post("http://localhost:8000/api/admin/quizzes/", payload, {
+        await axios.post("https://quizapp-1-y0cu.onrender.com/api/admin/quizzes/", payload, {
           headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
@@ -193,7 +193,7 @@ const AdminDashboard = () => {
   const handleDelete = async (id) => {
     if (!id) return toast.error("❌ Quiz ID not found for delete");
     try {
-      await axios.delete(`http://localhost:8000/api/admin/quizzes/${id}/`, {
+      await axios.delete(`https://quizapp-1-y0cu.onrender.com/api/admin/quizzes/${id}/`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast.success("🗑️ Quiz deleted");

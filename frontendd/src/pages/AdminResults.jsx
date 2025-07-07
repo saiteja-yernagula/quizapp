@@ -12,7 +12,7 @@ function AdminResults() {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const res = await axios.get("http://127.0.0.1:8000/api/admin/results/", {
+        const res = await axios.get("https://quizapp-1-y0cu.onrender.com/api/admin/results/", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

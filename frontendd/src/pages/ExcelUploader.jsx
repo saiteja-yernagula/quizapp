@@ -16,7 +16,7 @@ function ExcelUploader() {
 
     try {
       await axios.post(
-        "http://127.0.0.1:8000/api/admin/upload-excel/",
+        "https://quizapp-1-y0cu.onrender.com/api/admin/upload-excel/",
         formData,
         {
           headers: {

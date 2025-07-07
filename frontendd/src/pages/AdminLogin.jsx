@@ -14,10 +14,10 @@ function AdminLogin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://127.0.0.1:8000/api/token/", form);
+      const res = await axios.post("https://quizapp-1-y0cu.onrender.com/api/token/", form);
       localStorage.setItem("token", res.data.access);
 
-      const profileRes = await axios.get("http://127.0.0.1:8000/api/profile/", {
+      const profileRes = await axios.get("https://quizapp-1-y0cu.onrender.com/api/profile/", {
         headers: {
           Authorization: `Bearer ${res.data.access}`,
         },

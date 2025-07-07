@@ -10,7 +10,7 @@ const StudentResults = () => {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const res = await axios.get("http://127.0.0.1:8000/api/student/results/", {
+        const res = await axios.get("https://quizapp-1-y0cu.onrender.com/api/student/results/", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setResults(res.data);
